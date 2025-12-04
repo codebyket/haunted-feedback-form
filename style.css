@@ -1,0 +1,372 @@
+/* ============================================
+   Haunted Feedback Form - Spooky Stylesheet
+   ============================================ */
+
+/* === Base Styles and Color Scheme === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #2d0052 100%);
+    background-attachment: fixed;
+    color: #00ff41;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #9d4edd;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.5),
+                0 0 60px rgba(0, 255, 65, 0.3);
+}
+
+/* === Typography === */
+
+h1 {
+    color: #39ff14;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #39ff14,
+                 0 0 20px #39ff14,
+                 0 0 30px #39ff14;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #39ff14,
+                     0 0 20px #39ff14,
+                     0 0 30px #39ff14;
+    }
+    to {
+        text-shadow: 0 0 20px #39ff14,
+                     0 0 30px #39ff14,
+                     0 0 40px #39ff14,
+                     0 0 50px #9d4edd;
+    }
+}
+
+.subtitle {
+    text-align: center;
+    color: #b19cd9;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* === Form Styles === */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: #b19cd9;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+select,
+textarea {
+    background: rgba(26, 0, 51, 0.8);
+    border: 2px solid #9d4edd;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #00ff41;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #7b68a0;
+    opacity: 0.8;
+}
+
+/* Hover and Focus States */
+
+input[type="text"]:hover,
+select:hover,
+textarea:hover {
+    border-color: #b19cd9;
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #39ff14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5),
+                0 0 10px rgba(157, 78, 221, 0.3);
+    background: rgba(26, 0, 51, 0.95);
+}
+
+/* Select Dropdown Styling */
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2300ff41' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+select option {
+    background: #1a0033;
+    color: #00ff41;
+}
+
+/* Textarea */
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Small Text */
+
+small {
+    color: #7b68a0;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* === Submit Button === */
+
+.submit-btn {
+    background: linear-gradient(135deg, #9d4edd 0%, #b19cd9 100%);
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #b19cd9 0%, #9d4edd 100%);
+    border-color: #00ff41;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.8),
+                0 0 20px rgba(157, 78, 221, 0.6);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+}
+
+/* === Result Page Styles === */
+
+.spooky-message {
+    background: rgba(26, 0, 51, 0.6);
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    color: #b19cd9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.4);
+}
+
+.back-link {
+    display: inline-block;
+    color: #9d4edd;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #9d4edd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-link:hover {
+    color: #39ff14;
+    border-color: #39ff14;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    transform: translateX(-5px);
+}
+
+/* === Responsive Layout === */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    input[type="text"],
+    select,
+    textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    
+    .spooky-message {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    form {
+        gap: 20px;
+    }
+    
+    .submit-btn {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+}
+
+/* === Accessibility === */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Ensure sufficient contrast for readability */
+::selection {
+    background: #9d4edd;
+    color: #000000;
+}
+
+/* === Submission Confirmation === */
+
+.submission-confirmation {
+    background: linear-gradient(135deg, #39ff14 0%, #00ff41 100%);
+    border: 2px solid #9d4edd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.8),
+                0 0 20px rgba(157, 78, 221, 0.5);
+    animation: fadeInPulse 0.5s ease-in-out;
+}
+
+@keyframes fadeInPulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === Success Page Styles === */
+
+.success-message {
+    background: rgba(26, 0, 51, 0.6);
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.4);
+}
+
+.confirmation-text {
+    color: #39ff14;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #39ff14;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #9d4edd;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #9d4edd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-link a:hover {
+    color: #39ff14;
+    border-color: #39ff14;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}

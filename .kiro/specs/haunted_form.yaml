@@ -1,0 +1,39 @@
+# Haunted Feedback Form Specification
+
+form_fields:
+  - name: name
+    type: text
+    required: true
+    description: User's name for personalization
+    
+  - name: spooky_level
+    type: select
+    required: true
+    description: How spooky the user wants their experience
+    options:
+      - "Not spooky"
+      - "A little spooky"
+      - "Very spooky"
+      - "Terrifying"
+      
+  - name: favorite_creature
+    type: text
+    required: false
+    description: User's favorite spooky creature (optional)
+    default: "a mysterious unknown being"
+    
+  - name: message
+    type: textarea
+    required: true
+    description: User's feedback message
+
+output_type:
+  type: spooky_message
+  format: string
+  includes:
+    - ghost_emoji: "👻"
+    - user_name: true
+    - spooky_level: true
+    - favorite_creature: true
+    - original_message: true
+    - atmospheric_language: true
