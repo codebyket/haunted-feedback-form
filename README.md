@@ -47,7 +47,7 @@ npx http-server
 php -S localhost:8000
 ```
 
-Then navigate to `http://localhost:8000` in your browser.
+Then navigate to `http://localhost:8000`or `http://192.168.29.137:8000`  in your browser.
 
 ## How It Works
 
